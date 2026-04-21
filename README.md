@@ -43,10 +43,13 @@ This will automatically install all the necessary libraries for the application 
 6. Run the platform
 Change the terminal directory to the project folder using the cd command, replacing the path with the actual location where you unzipped the .zip file:
 cd C:\Users\YourUser\Downloads\my_platform
+
 Next, run the application with:
 streamlit run app.py
+
 Alternative: If you prefer not to change directories, you can run the full path directly:
 streamlit run C:\Users\YourUser\Downloads\my_platform\app.py
+
 The platform will open automatically in a new tab in your browser. If it doesn't open on its own, copy and paste the address that appears in the terminal into your browser, typically: http://localhost:8501
 
 Common problems and how to solve them
@@ -80,6 +83,7 @@ pip3 install streamlit
 
 4. (Opcional) Crear un entorno virtual
 Se recomienda crear un entorno virtual para mantener separadas las dependencias del proyecto.
+
 Ejecuta los siguientes comandos dentro de la carpeta del proyecto (habiendo cambiado la ruta mediante el comando cd y la ubicación del archivo .zip descomprimido):
 python -m venv venv
 
@@ -99,6 +103,7 @@ Esto instalará automáticamente todas las librerías necesarias para que la apl
 6. Ejecutar la plataforma
 Cambia el directorio de la terminal a la carpeta del proyecto con el comando cd, sustituyendo la ruta por la ubicación real donde descomprimiste el .zip:
 cd C:\Users\TuUsuario\Downloads\mi_plataforma
+
 A continuación, ejecuta la aplicación con:
 streamlit run app.py
 
