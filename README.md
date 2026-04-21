@@ -13,8 +13,8 @@ Before starting, make sure you have Python 3.8 or higher installed. You can down
 Download the .zip file containing this document and unzip it in your preferred location (for example, in your Downloads folder or on your Desktop).
 
 2. Open the system terminal
-•	Windows: Press Win + R, type cmd, and press Enter. You can also search for PowerShell in the Windows search bar.
-•	macOS: Press Cmd + Space, type Terminal, and press Enter.
+- Windows: Press Win + R, type cmd, and press Enter. You can also search for PowerShell in the Windows search bar.
+- macOS: Press Cmd + Space, type Terminal, and press Enter.
 
 3. Install Streamlit (if not already installed)
 Type the following command in the terminal and press Enter:
@@ -29,10 +29,9 @@ Run the following command inside the project folder (after navigating to the unz
 python -m venv venv
 
 Activate the virtual environment:
- 
-•	On Windows:
+- On Windows:
 venv\Scripts\activate
-•	On macOS / Linux:
+- On macOS / Linux:
 source venv/bin/activate
  
 
@@ -51,9 +50,9 @@ streamlit run C:\Users\YourUser\Downloads\my_platform\app.py
 The platform will open automatically in a new tab in your browser. If it doesn't open on its own, copy and paste the address that appears in the terminal into your browser, typically: http://localhost:8501
 
 Common problems and how to solve them
-•	"pip is not recognized as an internal or external command": Ensure that Python is properly installed and that the option to add it to the system's PATH was checked during installation.
-•	"Module not found": Run pip install -r requirements.txt again and double-check that you are in the correct project folder in your terminal.
-•	The browser does not open automatically: Manually copy the address http://localhost:8501 and paste it into your web browser's search bar.
+- "pip is not recognized as an internal or external command": Ensure that Python is properly installed and that the option to add it to the system's PATH was checked during installation.
+- "Module not found": Run pip install -r requirements.txt again and double-check that you are in the correct project folder in your terminal.
+- The browser does not open automatically: Manually copy the address http://localhost:8501 and paste it into your web browser's search bar.
 
 
 READ_ME (ES):
@@ -85,10 +84,9 @@ Ejecuta los siguientes comandos dentro de la carpeta del proyecto (habiendo camb
 python -m venv venv
 
 Activa el entorno virtual:
- 
-•	En Windows:
+- En Windows:
 venv\Scripts\activate
-•	En macOS / Linux:
+- En macOS / Linux:
 source venv/bin/activate
  
 
@@ -111,6 +109,7 @@ La plataforma se abrirá automáticamente en una pestaña de tu navegador. Si no
 http://localhost:8501
 
 Problemas comunes y cómo solucionarlos
-•	"pip no se reconoce como comando": asegura de que Python está bien instalado y añadido al PATH del sistema.
-•	"Module not found": ejecuta de nuevo pip install -r requirements.txt y comprueba que estás en la carpeta correcta.
-•	El navegador no se abre automáticamente: copia manualmente la dirección http://localhost:8501 en tu navegador.
+
+- "pip no se reconoce como comando": asegura de que Python está bien instalado y añadido al PATH del sistema.
+- "Module not found": ejecuta de nuevo pip install -r requirements.txt y comprueba que estás en la carpeta correcta.
+- El navegador no se abre automáticamente: copia manualmente la dirección http://localhost:8501 en tu navegador.
