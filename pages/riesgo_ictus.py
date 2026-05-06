@@ -14,17 +14,16 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 from ictus_carga_datos    import cargar_datos_ictus
 from ictus_preprocesado   import preprocesar_ictus
-from ictus_modelos        import entrenar_y_evaluar_ictus, cargar_columnas_modelo_ictus
+from ictus_modelos        import entrenar_y_evaluar_ictus
 from ictus_visualizador   import (
     mostrar_resumen_ictus, mostrar_distribucion_numerica_ictus,
     mostrar_distribucion_categorica_ictus, mostrar_correlacion_ictus,
-    mostrar_valores_nulos_ictus, mostrar_comparativa_paciente_ictus,
+    mostrar_comparativa_paciente_ictus,
     mostrar_selector_rango_edad_ictus,
 )
 from ictus_utils import (
-    NUMERIC_COLS, CATEGORICAL_COLS, TARGET_COL,
-    MODELOS_DISPONIBLES_ICTUS, IMAGES_DIR, BASE_DIR,
-)
+    NUMERIC_COLS, CATEGORICAL_COLS,
+    MODELOS_DISPONIBLES_ICTUS, BASE_DIR)
 
 
 st.markdown("""
