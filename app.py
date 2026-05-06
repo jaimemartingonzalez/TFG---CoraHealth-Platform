@@ -11,7 +11,7 @@ st.set_page_config(page_title="CoraHealth", page_icon="❤️", layout="wide")
 pg = st.navigation([
     st.Page("pages/inicio.py",                     title="🏠 Inicio"),
     st.Page("pages/informacion_cardiovascular.py",  title="📚 Información CardioVascular Relevante"),
-    st.Page("pages/riesgo_CV.py",                  title="💗 Predicción Riesgo CV"),
+    st.Page("pages/riesgo_cv.py",                  title="💗 Predicción Riesgo CV"),
     st.Page("pages/riesgo_ictus.py",               title="🧠 Riesgo Ictus (BETA)"),
 ])
 
