@@ -57,23 +57,19 @@ st.write("Recuerda que ésta no es una herramienta de diagnóstico, está pensad
 
 
 # Desplegable con las opciones
-opcion = st.selectbox(
-    "Selecciona la página a la que quieres dirigirte:",
-    ["Información importante sobre las enfermedades cardiovasculares", "Riesgo Enfermedad CardioVascular", "Riesgos sufrir ictus (BETA version)"]
-)
+OPT_CV   = "Calculadora Riesgo Enfermedad CardioVascular"
+OPT_INFO = "Información importante sobre las enfermedades cardiovasculares"
+OPT_ICTUS = "Calculadora Riesgo de ICTUS (BETA version)"
 
+opcion = st.selectbox("Selecciona la página a la que quieres dirigirte:", [OPT_INFO, OPT_CV, OPT_ICTUS])
 
-
-
-
-# Botón para navegar
 if st.button("Continuar"):
-    if opcion == "Información importante sobre las enfermedades cardiovasculares":
+    if opcion == OPT_INFO:
         st.switch_page("pages/informacion_cardiovascular.py")
-    elif opcion == "Riesgos sufrir ictus (BETA version)":
-        st.switch_page("pages/riesgo_ictus.py")
-    elif opcion == "Riesgo Enfermedad CardioVascular":
+    elif opcion == OPT_CV:
         st.switch_page("pages/riesgo_cv.py")
+    elif opcion == OPT_ICTUS:
+        st.switch_page("pages/riesgo_ictus.py")
 
 
 
