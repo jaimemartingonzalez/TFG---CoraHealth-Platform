@@ -2,8 +2,6 @@ import streamlit as st
 import sys
 import warnings
 import pandas as pd
-import numpy as np
-import base64
 import plotly.express as px
 import plotly.graph_objects as go
 import joblib
@@ -17,11 +15,9 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 from carga_datos import cargar_datos
 from preprocesado import preprocesar
-from modelos import entrenar_y_evaluar, cargar_columnas_modelo
-from utils import NUMERIC_COLS, CATEGORICAL_COLS, TARGET_COL, MODELOS_DISPONIBLES, IMAGES_DIR, BASE_DIR
-from visualizador import (mostrar_resumen, mostrar_distribucion_numerica,
-                           mostrar_distribucion_categorica, mostrar_correlacion,
-                           mostrar_valores_nulos, mostrar_comparativa_paciente, mostrar_selector_rango_edad)
+from modelos import entrenar_y_evaluar
+from utils import NUMERIC_COLS, CATEGORICAL_COLS, MODELOS_DISPONIBLES, IMAGES_DIR, BASE_DIR
+from visualizador import (mostrar_comparativa_paciente, mostrar_selector_rango_edad)
 import importlib
 
 
