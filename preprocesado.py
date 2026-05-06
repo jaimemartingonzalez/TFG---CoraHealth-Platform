@@ -11,12 +11,12 @@ from utils import (NUMERIC_COLS, CATEGORICAL_COLS, TARGET_COL,
 import joblib
 from utils import BASE_DIR
 
-@st.cache_data(show_spinner="ðŸ”§ Imputando y limpiando datos...")
+@st.cache_data(show_spinner="Ã°ÂŸÂ”Â§ Imputando y limpiando datos...")
 def preprocesar(df: pd.DataFrame):
     X = df.drop(columns=[TARGET_COL])
     y = df[TARGET_COL]
 
-    # 1. Numéricas: KNN Imputer
+    # 1. Numericas: KNN Imputer
     X_num = X[NUMERIC_COLS].apply(pd.to_numeric, errors='coerce')
     imputer_num = KNNImputer(n_neighbors=KNN_NEIGHBORS)
     X_num_imp = pd.DataFrame(
@@ -24,7 +24,7 @@ def preprocesar(df: pd.DataFrame):
         columns=NUMERIC_COLS, index=X.index
     )
 
-    # 2. Categóricas: Imputer "Unknown" 
+    # 2. Categoricas: Imputer "Unknown" 
     X_cat = X[CATEGORICAL_COLS].copy().astype(str)
     imputer_cat = SimpleImputer(strategy="constant", fill_value=CAT_IMPUTER_FILL)
     X_cat_imp = pd.DataFrame(
@@ -41,7 +41,7 @@ def preprocesar(df: pd.DataFrame):
         random_state=RANDOM_STATE, stratify=y
     )
 
-    # 5. SMOTE-NC (trabaja con las categorías como texto)
+    # 5. SMOTE-NC (trabaja con las categorias como texto)
     cat_idx = [X_clean_raw.columns.get_loc(c) for c in CATEGORICAL_COLS]
     smote_nc = SMOTENC(
         categorical_features=cat_idx,
@@ -51,7 +51,7 @@ def preprocesar(df: pd.DataFrame):
     X_train_smote, y_train_smote = smote_nc.fit_resample(X_train, y_train)
 
     # 6. One-Hot Encoding Final 
-    # Convertimos todo a números (0/1) para que el modelo no dé error
+    # Convertimos todo a numeros (0/1) para que el modelo no de error
     # Concatenamos temporalmente para asegurar que train y test tengan las mismas columnas
     X_combined = pd.concat([X_train_smote, X_test])
     X_combined_encoded = pd.get_dummies(X_combined, columns=CATEGORICAL_COLS, drop_first=True)
@@ -60,7 +60,7 @@ def preprocesar(df: pd.DataFrame):
     X_train_final = X_combined_encoded.iloc[:len(X_train_smote)].copy()
     X_test_final = X_combined_encoded.iloc[len(X_train_smote):].copy()
 
-    # X_clean también debe estar encodeado para que coincida con lo que el modelo espera
+    # X_clean tambien debe estar encodeado para que coincida con lo que el modelo espera
     X_clean_encoded = pd.get_dummies(X_clean_raw, columns=CATEGORICAL_COLS, drop_first=True)
 
     ruta_columnas = BASE_DIR / "models" / "columnas_modelo.joblib"
