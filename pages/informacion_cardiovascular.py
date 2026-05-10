@@ -11,7 +11,6 @@ st.set_page_config(page_title="❤️ Enfermedades Cardiovasculares - Importanci
 
 st.markdown("""
     <style>
-        .stApp { background-color: black; color: white; }
         .rosa-box { background-color: #FF6961; color: white; padding: 1.5rem; border-radius: 15px; margin: 1rem 0; text-align: center; }
         .texto-seccion { font-size: 1.1rem; line-height: 1.6; }
     </style>
