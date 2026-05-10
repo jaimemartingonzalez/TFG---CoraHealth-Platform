@@ -44,7 +44,7 @@ def entrenar_y_evaluar(nombre: str, X_train, X_test, y_train, y_test):
     ruta = MODELS_DIR / f"{MODELOS_DISPONIBLES[nombre]}.joblib"
 
     if not ruta.exists():
-        with st.spinner(f"⏳ Entrenando {nombre} por primera vez..."):
+        with st.spinner():
             modulo = importlib.import_module(MODELOS_DISPONIBLES[nombre])
             resultado = modulo.entrenar(X_train, y_train)
 
