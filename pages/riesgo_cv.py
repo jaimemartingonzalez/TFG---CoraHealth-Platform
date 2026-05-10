@@ -527,8 +527,7 @@ if st.session_state.resultado_prediccion is not None:
             fig_gauge.update_layout(
                 height=300,
                 margin=dict(t=60, b=60, l=30, r=30),
-                paper_bgcolor="rgba(0,0,0,0)",
-                font={"color": "white"}
+                paper_bgcolor="rgba(0,0,0,0)"
             )
             st.plotly_chart(
                 fig_gauge,
