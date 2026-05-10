@@ -8,10 +8,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 st.markdown("""
         <style>
-            .stApp {
-                background-color: black;
-                color: white;
-            }
             .main-content {
                 background-color: #FF6961; /* Rojo-pastel */
                 color: white;
