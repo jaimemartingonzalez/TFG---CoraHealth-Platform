@@ -12,7 +12,7 @@ pg = st.navigation([
     st.Page("pages/inicio.py",                     title="🏠 Inicio"),
     st.Page("pages/informacion_cardiovascular.py",  title="📚 Información CardioVascular Relevante"),
     st.Page("pages/riesgo_cv.py",                  title="💗 Predicción Riesgo CV"),
-    st.Page("pages/riesgo_ictus.py",               title="🧠 Riesgo Ictus (BETA)"),
+    st.Page("pages/riesgo_ictus.py",               title="🧠 Predicción Riesgo Ictus (BETA)"),
 ])
 
 # Disclaimer 
