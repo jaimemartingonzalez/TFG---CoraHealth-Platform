@@ -28,7 +28,6 @@ from ictus_utils import (
 
 st.markdown("""
     <style>
-        .stApp { background-color: black; color: white; }
         .rosa-box { background-color: #FF6961; color: white; padding: 1.5rem; border-radius: 15px; margin: 1rem 0; text-align: center; }
         .texto-seccion { font-size: 1.1rem; line-height: 1.6; }
     </style>
@@ -114,10 +113,7 @@ st.info("""
 
 Cuantos más campos rellenes y más precisos sean los valores,
 más fiable será la estimación del modelo. Los campos opcionales
-se estiman automáticamente con la media poblacional seleccionada.
-
-> ⚕️ **Esta herramienta tiene fines académicos (TFG) y no sustituye
-> el diagnóstico ni el juicio clínico de un profesional médico.**
+se estiman automáticamente con la media poblacional seleccionada.**
 """)
 
 nombre_modelo = st.selectbox(
